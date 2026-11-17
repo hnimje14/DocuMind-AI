@@ -1,0 +1,111 @@
+[
+  {
+    "id": "eval_q1",
+    "question": "What encryption standard is required for data at rest and how often must cryptographic master keys be rotated?",
+    "expected_answer": "All persistent cloud databases and storage must use AES-256-GCM encryption at rest with Customer-Managed Keys (CMK), and cryptographic master keys must undergo automatic rotation every 90 days.",
+    "expected_keywords": [
+      "AES-256-GCM",
+      "90 days",
+      "Customer-Managed Keys",
+      "CMK"
+    ],
+    "relevant_document_names": [
+      "Enterprise_Cloud_Security_Policy_2026.pdf"
+    ],
+    "relevant_pages": [
+      2
+    ]
+  },
+  {
+    "id": "eval_q2",
+    "question": "What are the Severity 1 incident response SLAs and audit log retention requirements?",
+    "expected_answer": "Severity 1 incidents must be acknowledged within 15 minutes, contained within 30 minutes, and reported to leadership within 1 hour. Immutable audit logs must be retained in hot storage for 90 days and cold WORM archive storage for 7 years.",
+    "expected_keywords": [
+      "15 minutes",
+      "30 minutes",
+      "90 days",
+      "7 years",
+      "WORM"
+    ],
+    "relevant_document_names": [
+      "Enterprise_Cloud_Security_Policy_2026.pdf"
+    ],
+    "relevant_pages": [
+      3
+    ]
+  },
+  {
+    "id": "eval_q3",
+    "question": "How are internal microservice requests authenticated in the Zero Trust Network Architecture?",
+    "expected_answer": "Every internal microservice request must authenticate using mutual TLS (mTLS) with short-lived X.509 certificates rotated automatically every 24 hours via HashiCorp Vault.",
+    "expected_keywords": [
+      "mutual TLS",
+      "mTLS",
+      "24 hours",
+      "HashiCorp Vault",
+      "X.509"
+    ],
+    "relevant_document_names": [
+      "Enterprise_Cloud_Security_Policy_2026.pdf"
+    ],
+    "relevant_pages": [
+      1
+    ]
+  },
+  {
+    "id": "eval_q4",
+    "question": "How much did Hybrid Search improve Mean Reciprocal Rank (MRR) and what were the MMR diversity results?",
+    "expected_answer": "Hybrid search combining FAISS semantic search with BM25 improved Mean Reciprocal Rank (MRR) from 0.76 to 0.89. Applying MMR with lambda = 0.65 reduced redundant chunk retrieval by 41%.",
+    "expected_keywords": [
+      "0.76",
+      "0.89",
+      "BM25",
+      "41%",
+      "0.65"
+    ],
+    "relevant_document_names": [
+      "NexusAI_RAG_Architecture_Benchmark_Report.pdf"
+    ],
+    "relevant_pages": [
+      2
+    ]
+  },
+  {
+    "id": "eval_q5",
+    "question": "What latency and Recall@5 did sentence-transformers/all-MiniLM-L6-v2 achieve in the benchmark?",
+    "expected_answer": "sentence-transformers/all-MiniLM-L6-v2 (384 dimensions) achieved an average CPU query latency of 14.2 ms while maintaining 91.4% Recall@5 on technical documentation.",
+    "expected_keywords": [
+      "14.2 ms",
+      "91.4%",
+      "384",
+      "Recall@5"
+    ],
+    "relevant_document_names": [
+      "NexusAI_RAG_Architecture_Benchmark_Report.pdf"
+    ],
+    "relevant_pages": [
+      1
+    ]
+  },
+  {
+    "id": "eval_q6",
+    "question": "Compare the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) between the Cloud Security Policy and the legacy analytics clusters.",
+    "expected_answer": "In the Enterprise Cloud Security Policy, Tier 1 mission-critical services have an RTO of 30 minutes and RPO of 5 minutes. In contrast, the NexusAI Benchmark Report notes that legacy on-premise analytics clusters have a relaxed RTO of 4 hours and RPO of 60 minutes.",
+    "expected_keywords": [
+      "30 minutes",
+      "5 minutes",
+      "4 hours",
+      "60 minutes",
+      "RTO",
+      "RPO"
+    ],
+    "relevant_document_names": [
+      "Enterprise_Cloud_Security_Policy_2026.pdf",
+      "NexusAI_RAG_Architecture_Benchmark_Report.pdf"
+    ],
+    "relevant_pages": [
+      3,
+      2
+    ]
+  }
+]

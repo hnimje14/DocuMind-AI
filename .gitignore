@@ -1,0 +1,66 @@
+# ============================================================================
+# DocuMind AI - Git Ignore Rules
+# ============================================================================
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python Bytecode & Build Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Runtime Databases (SQLite)
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+*.sqlite
+*.sqlite3
+
+# Runtime Vector Store Indexes (FAISS)
+data/vectorstore/*
+!data/vectorstore/.gitkeep
+
+# User Uploaded Documents & Generated Runtime PDFs
+data/uploads/*
+!data/uploads/.gitkeep
+data/sample_docs/
+
+# Temporary Evaluation Indexes & Backups
+evaluation/results/temp_vs_*/
+backups/
+tmp/
+temp/
+
+# Testing, Coverage & Caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+*.log
+logs/
+
+# IDE & OS Specific Files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
